@@ -2,10 +2,10 @@ Config = {}
 
 Config.DrawDistance = 15.0 -- The distance where the script draw markers
 
-Config.NumberOfJobs = 10 -- Number of claimable jobs (reset on script, also on server restart), set it to nil the infinte jobs
+Config.NumberOfJobs = 10 -- Number of claimable jobs (reset on script, also on server restart), set it to nil means infinte jobs
 
 Config.Dispatcher = {
-    Name = 'Ügyvezetö', -- For text UI
+    Name = 'Boss', -- For text UI
     Ped = 'csb_ortega', -- Ped model
     Heading = 88.31, -- Only if ped is not nil
     Position = vector3(-956.2419, 327.7668, 71.4643), -- Position of marker or ped
@@ -37,7 +37,7 @@ Config.DispatcherBlipColor = 2
 Config.ClientBlip = true
 Config.ClientBlipId = 280
 Config.ClientBlipColor = 2
-Config.ClientBlipName = 'Ügyfél'
+Config.ClientBlipName = 'Customer'
 
 -- JOB MENU
 Config.JobMenu = true -- If true players can access their job infos and they can leave or end the job in the menu
@@ -63,12 +63,12 @@ Config.AdvancedTitle = 'Garden Twins Co.'
 Config.Webhook = 'https://discord.com/api/webhooks/1084165093606043688/8MliOlnTxLFmG1zEtcJ7ZkxX5I_DE9eX_ITXnveFsSmCMyQKgSVL6AfssTDJJ0mvj8gP'
 Config.LogColor = '65352'
 Config.IconURL = 'https://cdn.discordapp.com/attachments/823189849682477077/1209832856759566378/bnc_logo.png?ex=66040b26&is=65f19626&hm=3c4641397b01065d760a806466470f3a9dfd4083f05c3f0019fae0bdd7a7cc81&'
-Config.ServerName = 'Koma RP'
-Config.Title = 'Egy játékos megkapta a fizetését egy ügyféltől (Kertészet)'
-Config.PlayerName = 'Játékos neve: '
-Config.PlayerID = 'Játékos ID: '
-Config.Money = 'Pénz összege: '
-Config.Check = 'Fizetés típusa: '
+Config.ServerName = 'Server Name'
+Config.Title = 'Player get payed from Gardening job (bnc_gardening)'
+Config.PlayerName = 'Player Name: '
+Config.PlayerID = 'Player ID: '
+Config.Money = 'Money amount: '
+Config.Check = 'Money type: '
 
 -- OTHERS
 Config.PayCheckType = 'cash' -- cash or bank
@@ -79,44 +79,44 @@ Config.SetWaypoint = true -- If true the script will set a waypoint to the job's
 
 Config.Locales = {
     -- TEXTUI
-    ['speak'] = 'Nyomj [~g~E~w~] hogy beszélj vele: ',
-    ['speak_client'] = 'Nyomj [~g~E~w~] hogy beszélj vele: ',
-    ['trash_in'] = 'Nyomj [~g~H~w~] hogy kidobd a szemetet',
-    ['trash_wrong'] = '~r~Ezzel a járművel nem végezheted a munkát!',
-    ['plant_pick'] = 'Nyomj [~g~E~w~] hogy gyomlálj',
-    ['trash_up'] = 'Nyomj [~g~E~w~] hogy felvedd a szemetet',
+    ['speak'] = 'Press [~g~E~w~] to talk with: ',
+    ['speak_client'] = 'Press [~g~E~w~] to talk with: ',
+    ['trash_in'] = 'Press [~g~H~w~] to take trash out',
+    ['trash_wrong'] = '~r~You cant do the job with this vehicle!',
+    ['plant_pick'] = 'Press [~g~E~w~] to weeding',
+    ['trash_up'] = 'Press [~g~E~w~] to pick up trash',
     -- NOTIFICATIONS
-    ['job_already'] = 'Már folyamatban van egy munkád!',
-    ['weeding_done'] = 'Gyomlálás kész!',
-    ['trash_done'] = 'Szemét kidobva!',
-    ['job_done'] = 'Befejeztél minden feladatot!',
-    ['payed'] = 'Megkaptad a fizetésed a munkádért!', -- not good if youre not using advanced notification, so I recommend to change it (if using normal esx notification)
-    ['carcant'] = 'Már van kint egy munkaautód, előbb azt hozd vissza!',
+    ['job_already'] = 'You are already on a job!',
+    ['weeding_done'] = 'Weeding done!',
+    ['trash_done'] = 'Trash tooken out!',
+    ['job_done'] = 'All tasks done!',
+    ['payed'] = 'You get you paycheck!', -- not good if youre not using advanced notification, so I recommend to change it (if using normal esx notification)
+    ['carcant'] = 'You already have a job vehicle!',
     -- PROGRESSBARS
-    ['weeding'] = 'Gyomlálás...',
-    ['trash'] = 'Szemét kidobása...'
+    ['weeding'] = 'Weeding...',
+    ['trash'] = 'Taking trash out...'
 }
 
 Config.Dialogs = {
     -- ANSWERS
-    ['yes'] = 'Igen',
-    ['no'] = 'Nem',
-    ['yes_job'] = 'Igen (munka befejezése)',
-    ['no_job'] = 'Nem (munka befejezés)',
-    ['leave_job'] = 'Munka befejezés',
-    ['end_job'] = 'Munka leadása (kész)',
+    ['yes'] = 'Yes',
+    ['no'] = 'No',
+    ['yes_job'] = 'Yes (end job)',
+    ['no_job'] = 'No (end job)',
+    ['leave_job'] = 'End job',
+    ['end_job'] = 'End job (Done)',
     -- INFOS
-    ['mission'] = 'Jelenlegi munkád: ',
-    ['client_name'] = 'Ügyfél neve: ',
-    ['tasks'] = 'Feladatok: ',
-    ['paycheck'] = 'Fizetés: ',
+    ['mission'] = 'Current job: ',
+    ['client_name'] = 'Customer name: ',
+    ['tasks'] = 'Tasks: ',
+    ['paycheck'] = 'Paycheck: ',
     ['currency'] = '$',
     -- QUESTIONS
-    ['start'] = 'El tudod kezdeni a munkát??',
-    ['leave_end'] = 'Befejezted a munkát, csak mert nem látom.',
-    ['job'] = 'Érdekelne egy kis munka?',
+    ['start'] = 'Can you start the job?',
+    ['leave_end'] = 'Did you finish the job, because I cant see it.',
+    ['job'] = 'Do you need a job?',
     -- DESCRIPTIONS
-    ['take_job'] = 'Jelenleg szabad munkák: ' -- Change text if Config.DisplayJobs = false
+    ['take_job'] = 'Currently available jobs: ' -- Change text if Config.DisplayJobs = false
 }
 
 -- CLIENTS
